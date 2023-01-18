@@ -9,13 +9,17 @@ function App() {
 
   useEffect(() => {
   
-      getTodos(toDos, setToDos);
+    getTodos(toDos, setToDos);
 
+    
   }, [])
   
+  const sortedTodos = toDos.sort((a, b)=> {
+    return a.todo_id-b.todo_id
+  })
   return (
     <div className="App">
-      <Input toDos={toDos} setToDos={setToDos} />
+      <Input toDos={sortedTodos} setToDos={setToDos} />
       <TodosList toDos={toDos} setToDos={setToDos} />
     </div>
   );
