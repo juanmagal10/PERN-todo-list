@@ -16,7 +16,7 @@ const InputComponent = ({toDos=[], setToDos}) => {
       const res=await axios.post('http://localhost:5000/todos', {
     todo
       })
-      setToDos([...toDos, res.data])      
+      setToDos([...toDos, res.data])
       
     } catch (e) {
       console.error(e.message);

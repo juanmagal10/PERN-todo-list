@@ -37,15 +37,15 @@ export const deleteTodo =async (id, state, setState) => {
 
 
 //editar tarea
-export const editTodo = async (id, state, setState, toDoEdited)=>{
-    try {
-        axios.put(`http://localhost:5000/todos/${id}`, {
-            todo:toDoEdited
-        })
-    } catch (error) {
-        console.log(error.message)
-    }
-}
+    // if (element.id === id) {
+    //         return {
+    //             ...element,
+            
+    //         }
+    //     }
+    //       setState([...state,state.map((element) => {
+    
+    // })])
 
 
 
